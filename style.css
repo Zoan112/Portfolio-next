@@ -1,0 +1,213 @@
+*,::after,::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  
+}
+
+body{
+    background-color: #F0EFEC;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+
+.mobileBar{
+float: right;
+margin-top: 1rem;
+margin-right: 1rem;
+}
+
+.codeImg{
+    width: 90%;
+    display: block;
+    margin: 0px auto;
+}
+
+.title{
+    color:#415078;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subTitle{
+    color:#415078;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*My work*/
+.myWorkImg{
+    display: block;
+    margin: 0px auto;
+}
+
+
+.card{
+    
+    width: 90%;
+    margin: 1rem auto;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cardScreenShot{
+    width: 100%;
+}
+
+.cardContent{
+    padding: 1rem;
+}
+
+.cardButtons{
+    margin: 0px 1rem 1rem 1rem;
+    padding: 1rem;    
+}
+.card h3{
+    font-weight: 500;
+    font-size: 17.8686px;
+    line-height: 27px;
+    color: #762C2C;
+    opacity: 0.6;
+}
+
+.card p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #BD9595;
+    opacity: 0.6;
+}
+
+
+
+.cardBtn{
+background-color: white;
+align-items: center;
+box-sizing: border-box;
+border-radius: 4px;
+
+display: flex;
+height: 20px;
+}
+
+.cardBtn img{
+vertical-align: middle;
+
+}
+
+.githubBtn{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #F89A76;
+    border: 1px solid #F89A76;
+}
+
+
+/*Conatct From*/
+.contactTitle{
+    margin-top: 2.5rem;
+    position: relative;
+    top: 3rem;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 24px;
+    align-items: center;
+    text-align: center;
+    color: #415078;
+}
+
+.contactSVG{
+  
+}
+
+.contactFormContainer{
+    background-color: #415078;
+    /*height: 40vh;*/
+    border-radius: 25px 0 0 0;
+
+}
+
+.conatctForm{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 1.5rem auto;
+}
+.conatctForm button{
+    background-color: #C0AC9F;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    width: 107px;
+    height: 59px;
+    margin-top: 0.7rem;
+    align-self: end;
+    border: none;
+    
+}
+
+.conatctForm label{
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 28px;
+    color: #C0AC9F;
+}
+
+.conatctForm input{
+border: none;
+background: #C4C4C4;
+border-radius: 10px;
+height: 22px;
+}
+
+.conatctForm textarea{
+
+background: #C4C4C4;
+border-radius: 10px;
+min-height: 136px;
+}
+/*Conatct Info*/
+
+.contactInfo{
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 28px;
+    color: #C0AC9F;
+    margin-left: 10%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.contactInfo p img{
+    vertical-align: middle;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+/*Footer*/
+
+footer{
+    min-height: 112px;
+    background-color:#FFFFFF;
+
+}
+.footerMenu{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 17px;
+}
+.footerInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 15px;
+    width: 90%;
+    margin: 0rem 1rem;
+}
