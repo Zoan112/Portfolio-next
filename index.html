@@ -12,16 +12,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="top" ></div>
     <img class="mobileBar" src="/Assets/mobileBar.svg">
-
+    <div class="desktopMenu">
+        <a href="#top">Zohar</a>
+        <a href="#myWork">Work</a>
+        <a href="#contactTitle">Contact</a>
+    </div>
     <div class="heading">
         <img class="codeImg" src="Assets/undraw_Code_review_re_woeb 3.svg" >
-        <img class="downloadCvBtn" src="Assets/downloadCvBtn.svg">
+        <button class="downloadCvBtn"><a target="_blank" href="Assets/Zohar Hadari CV.pdf">Download CV</a></button>
+        <!--<img class="downloadCvBtn" src="Assets/downloadCvBtn.svg">-->
         <h1 class="title">Zohar Hadari</h1>
         <h2 class="subTitle">Developer</h2>
     </div>
+
 <!-- My work -->
-    <img class="myWorkImg" src="Assets/myWorkImg.svg">
+    <img class="myWorkImg" id="myWork" src="Assets/myWorkImg.svg">
 
 
     <div class="card Num1">
@@ -35,6 +42,8 @@ Capacitor for the Camera API, Ionic framework for UI and Firebase for DB. (Work 
         </div>
         <div class="cardButtons">
             <button class="cardBtn githubBtn"><img src="Assets/gitHubIcon.svg">&nbsp;Git hub</button>
+            <button class="cardBtn apkBtn"><img class="apkLogo" src="Assets/android-logo.svg">&nbsp;APK</button>
+            <button class="cardBtn webAppBtn"><img  class="webAppLogo" src="Assets/globe.svg">&nbsp;Web App</button>
          
         </div>
         
@@ -49,23 +58,21 @@ Capacitor for the Camera API, Ionic framework for UI and Firebase for DB. (Work 
             Designed using Figma.</p>
         </div>
         <div class="cardButtons">
-            <button class="cardBtn githubBtn"><img src="Assets/gitHubIcon.svg">&nbsp;Git hub</button>
-            <button class="cardBtn apkBtn"><img src="Assets/android-logo.svg">&nbsp;APK</button>
-            <button class="cardBtn webAppBtn"><img src="Assets/globe.svg">&nbsp;Web App</button>
-  
+            <button class="cardBtn githubBtn"><img class="githubLogo" src="Assets/gitHubIcon.svg">&nbsp;Git hub</button>
         </div>
         
     </div>
 
 
 <!-- Contact -->
-<h3 class="contactTitle">Contact</h3>
+<h3 class="contactTitle" id="contactTitle">Contact</h3>
     <img class="contactSVG" src="Assets/undraw_contact_us_15o2 5.svg">
+<div class="contactContainer">
 <div class ="contactFormContainer">
 <div class="conatctForm">
     <label>Email:</label>
     <input placeholder="" type="email">
-    <label>Message:</label>
+    <label class="messages">Message:</label>
     <textarea></textarea>
     <button>Submit</button>
 </div>
@@ -75,18 +82,18 @@ Capacitor for the Camera API, Ionic framework for UI and Firebase for DB. (Work 
       <p><img src="/Assets/Email.svg">zohar.hadari@gmail.com</p>
 
   </div>
- 
+</div>
 </body>
 
 <footer>
     <div class=footerMenu>
-    <p>Zohar</p>
-    <p>Work</p>
-    <p>Contact</p>
+        <a href="#top">Zohar</a>
+        <a href="#myWork">Work</a>
+        <a href="#contactTitle">Contact</a>
     </div>
     <div class="footerInfo">
     <p>© 2021 Zohar Hadari</p>
-    <p>Back up<img src="/Assets/Arrow 1.svg"></p>
+    <a class=backup href="#top">Back up<img src="/Assets/Arrow 1.svg"></a>
 </div>
     </footer>
 

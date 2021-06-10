@@ -35,10 +35,32 @@ margin-right: 1rem;
 
 .downloadCvBtn{
     grid-row: 4/5;
+    height: min-content;
+    width: max-content;
+    padding: 0.7rem;
+    border: none;
+    background-color: #C0AC9F;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
     align-self: end;
+    border: 0.3rem solid #C0AC9F;
     margin-left: 8%;
     margin-bottom: 4%;
 }
+
+.downloadCvBtn:hover{
+    background-color: white;
+    color: #C0AC9F ;
+}
+
+.downloadCvBtn a{
+    color: unset;
+    text-decoration: unset;
+}
+
+
 
 .codeImg{
     width: 100%;
@@ -157,25 +179,58 @@ vertical-align: middle;
     border: 1px solid #F89A76;
 }
 
-.apkBtn{
-    color: #3DDB85;
-    border: 1px solid #3DDB85;
-}
-
-.webAppBtn{
-    color:#7FAFF5;
-    border: 1px solid #7FAFF5;
-    margin-top: 15px
-}
-
 .githubBtn:hover{
     color: white;
     background-color: orange;
     border: 1px solid #F89A76;
 }
 
+.githubBtn:hover .githubLogo {
+    filter:brightness(0) invert(1);
+}
 
-/*Conatct From*/
+.apkBtn{
+    color: #3DDB85;
+    border: 1px solid #3DDB85;
+}
+
+.apkBtn:hover{
+    color: white;
+    background-color: #3DDB85;
+    overflow-x: clip;
+}
+
+.apkBtn:hover .apkLogo{
+   
+
+    
+}
+
+.apkBtn:hover .logoTest{
+   
+
+
+}
+.webAppBtn{
+    color:#7FAFF5;
+    border: 1px solid #7FAFF5;
+    margin-top: 15px
+}
+.webAppBtn:hover{
+    color: white;
+    background-color: #0d6efd;
+}
+
+.webAppBtn:hover .webAppLogo{
+    
+    filter:brightness(0) invert(1);
+}
+
+
+
+
+
+/*Contact From*/
 .contactTitle{
     margin-top: 2.5rem;
     position: relative;
@@ -186,10 +241,12 @@ vertical-align: middle;
     align-items: center;
     text-align: center;
     color: #415078;
+    overflow: hidden;
 }
 
 .contactSVG{
-  
+  display: block;
+  margin: 0px auto;
 }
 
 .contactFormContainer{
@@ -276,6 +333,16 @@ footer{
     color: rgba(0, 0, 0, 0.38);
     font-size: 17px;
 }
+
+.footerMenu a{
+    color: unset;
+    text-decoration: unset;
+}
+.footerInfo a{
+    color: unset;
+    text-decoration: unset;
+}
+
 .footerInfo{
     display: flex;
     justify-content: space-between;
@@ -284,3 +351,124 @@ footer{
     width: 90%;
     margin: 0rem 1rem;
 }
+
+
+
+/*Desktop menu*/
+.desktopMenu{
+    display: none;
+}
+
+@media only screen and (min-width: 600px){
+    /*For Tablet*/
+
+}
+
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+
+
+    /*Menus*/
+.mobileBar{
+    display: none;
+}
+.desktopMenu{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 25%;
+    margin: 2rem auto;
+    } 
+
+.desktopMenu a{
+        color: unset;
+        text-decoration: unset;
+        font-size: 18px;
+        color: #C0AC9F;
+        font-weight: normal;
+        
+        }
+        
+        
+ /*Cards*/
+ .myWorkImg{
+     width: 438px;
+     height: auto;
+ }
+ 
+ .card{
+     display: flex;
+     width: 75%;
+     max-width: 1200px;
+    
+ }
+
+ .cardContent{
+     width: 100%;
+ }
+
+ .cardButtons{
+     width: 40%;
+     margin: unset;
+     padding: unset;
+     align-content: space-evenly;
+ }
+
+/*Contact*/
+
+.contactTitle{
+    font-size: 2.5rem;
+    overflow: initial;
+}
+.contactSVG{
+    width: 40%;
+    max-width: 438px;
+}
+
+.contactContainer{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.contactInfo{
+    margin: auto;
+}
+
+.contactFormContainer{
+    width: 50%;
+    height: 70vh;
+}
+
+.conatctForm{
+    height: 100%;
+
+    margin: auto;
+    justify-content: center;
+}
+
+.conatctForm .messages{
+    margin-top: 2rem;
+}
+
+
+.conatctForm>textarea{
+    height: 40%;
+}
+
+.conatctForm>button{
+    margin-top: 1.5rem;
+}
+
+.conatctForm>input{
+    height: 2.5rem;
+}
+
+
+/*Footer*/
+.footerMenu{
+    max-width: 45%;
+    margin: 1rem auto;
+}
+
+  }
