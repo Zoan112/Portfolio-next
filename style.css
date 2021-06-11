@@ -20,6 +20,97 @@ margin-top: 1rem;
 margin-right: 1rem;
 }
 
+/*new*/
+
+.newheading{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 0.8fr 1fr 1fr;
+    grid-template-columns: 1fr ;
+    overflow-x: clip;
+    
+}
+
+.window, .man, .newtitle, .newsubTitle, .newdownloadCvBtn{
+   grid-row: 2/ span 4;
+    grid-column: 1;
+}
+
+.window{
+    grid-row: 2 / span 6;
+    display: block;
+    width: 95%;
+    margin: 0px auto;
+}
+
+.windowDesktop{
+    display: none;
+}
+.man{
+    grid-row: 1 / span 1;
+    width: auto;
+    height: auto;
+    align-self: end;
+    position: relative;
+    left: 8%;
+    top: 1%;
+    z-index: -1;
+}
+
+
+.newtitle{
+    grid-row: 2 / span 3;
+    color:#415078;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 11%;
+    left: 11%;
+}
+
+.newsubTitle{
+    grid-row: 2 / span 3;
+    color:#415078;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    left:12%;
+    top: 14%;
+}
+
+.newdownloadCvBtn{
+    grid-row: 2/ span 2;
+    height: min-content;
+    width: max-content;
+    padding: 0.7rem;
+    border: none;
+    background-color: #C0AC9F;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    align-self: end;
+    border: 0.3rem solid #C0AC9F;
+    position: relative;
+    top: -5%;
+    left: 7%;
+    
+}
+
+.newdownloadCvBtn:hover{
+    background-color: white;
+    color: #C0AC9F ;
+}
+
+.newdownloadCvBtn a{
+    color: unset;
+    text-decoration: unset;
+}
+
+
+
+/*end new*/
+
 .heading{
     width: 100%;
     display: grid;
@@ -361,12 +452,50 @@ footer{
 
 @media only screen and (min-width: 600px){
     /*For Tablet*/
-
+    .newheading{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 0.6fr 1fr 1fr;
+        grid-template-columns: 1fr ;
+        
+    }
 }
 
 @media only screen and (min-width: 800px) {
     /* For desktop: */
 
+    /*Heading*/
+    .newheading{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto 1fr 0.1fr;
+    }
+
+    .man{
+        grid-column: 1;
+        grid-row: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .window{
+        display: none;
+    }
+
+    .windowDesktop, .newtitle, .newsubTitle, .newdownloadCvBtn{
+        grid-row: 1/ span 2;
+         grid-column: 2;
+     }
+
+
+    .windowDesktop{
+        display: block;
+        grid-row: 1 / span 2;
+        grid-column: 2;
+        margin: 0 auto;
+    }
 
     /*Menus*/
 .mobileBar{
