@@ -4,7 +4,7 @@
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-  
+    scroll-behavior: smooth;
 }
 
 body{
@@ -248,13 +248,14 @@ vertical-align: middle;
 }
 
 .webAppBtn:hover .webAppLogo{
-    
     filter:brightness(0) invert(1);
 }
 
 
 
-
+button:hover{
+    cursor: pointer;
+}
 
 /*Contact From*/
 .contactTitle{
@@ -360,14 +361,15 @@ footer{
     font-size: 17px;
 }
 
-.footerMenu a{
+.footerMenu a:hover{
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.footerMenu a, .footerInfo a{
     color: unset;
     text-decoration: unset;
 }
-.footerInfo a{
-    color: unset;
-    text-decoration: unset;
-}
+
 
 .footerInfo{
     display: flex;
@@ -375,7 +377,7 @@ footer{
     align-items: baseline;
     font-size: 15px;
     width: 90%;
-    margin: 0rem 1rem;
+    margin: 0rem auto;
 }
 
 
@@ -452,7 +454,11 @@ footer{
         font-weight: normal;
         
         }
-        
+
+.desktopMenu a:hover{
+    color: #8B7160;
+
+}
         
  /*Cards*/
  .myWorkImg{
@@ -534,6 +540,10 @@ footer{
 .footerMenu{
     max-width: 45%;
     margin: 1rem auto;
+}
+
+.footerInfo{
+    width: 80%;
 }
 
   }
