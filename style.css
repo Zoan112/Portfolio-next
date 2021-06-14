@@ -120,7 +120,7 @@ button.downloadCvBtn:hover{
 /*My work*/
 .myWorkImg{
     display: block;
-    margin: 0px auto;
+    margin: 3rem auto 0px auto;
 }
 
 
@@ -406,6 +406,10 @@ footer{
 @media only screen and (min-width: 800px) {
     /* For desktop: */
 
+    .heading{
+        grid-template-columns: 2fr auto 2fr;
+    }
+
 .window{
     display: none;
 }
@@ -414,26 +418,35 @@ footer{
     display: block;
     grid-row: 1 / span 3;
     grid-column: 1;
+
+    width: 80vw;
+    max-height: 70vh;
 }
 
 .downloadCvBtn{
+    margin: 0px auto;
     top: -30%;
-    left: 7%;
+    left: -23%;
 }
 
 .title{
+    margin: 0px auto;
     top: 14%;
-    left: 6%;
+    left: -20%;
+    font-size: 2.7rem;
 }
 
 .subTitle{
-    top: 16%;
-    left: 7%;
+    margin: 0px auto;
+    top: 20%;
+    left: -15%;
+    font-size: 4rem;
 }
 
 .man{
     max-height: 430px;
     min-height: 130px;
+    width: 200%;
 }
     /*Menus*/
 .mobileBar{
