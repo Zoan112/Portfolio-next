@@ -20,112 +20,47 @@ margin-top: 1rem;
 margin-right: 1rem;
 }
 
-/*new*/
 
-.newheading{
-    width: 100%;
-    display: grid;
-    grid-template-rows: 0.8fr 1fr 1fr;
-    grid-template-columns: 1fr ;
-    overflow-x: clip;
-    
-}
 
-.window, .man, .newtitle, .newsubTitle, .newdownloadCvBtn{
-   grid-row: 2/ span 4;
-    grid-column: 1;
-}
-
-.window{
-    grid-row: 2 / span 6;
-    display: block;
-    width: 95%;
-    margin: 0px auto;
-}
+/*Heading*/
 
 .windowDesktop{
     display: none;
 }
-.man{
-    grid-row: 1 / span 1;
-    width: auto;
-    height: auto;
-    align-self: end;
-    position: relative;
-    left: 8%;
-    top: 1%;
-    z-index: -1;
-}
 
-
-.newtitle{
-    grid-row: 2 / span 3;
-    color:#415078;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    top: 11%;
-    left: 11%;
-}
-
-.newsubTitle{
-    grid-row: 2 / span 3;
-    color:#415078;
-    font-size: 40px;
-    font-weight: bold;
-    position: relative;
-    left:12%;
-    top: 14%;
-}
-
-.newdownloadCvBtn{
-    grid-row: 2/ span 2;
-    height: min-content;
-    width: max-content;
-    padding: 0.7rem;
-    border: none;
-    background-color: #C0AC9F;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 18px;
-    color: white;
-    align-self: end;
-    border: 0.3rem solid #C0AC9F;
-    position: relative;
-    top: -5%;
-    left: 7%;
-    
-}
-
-.newdownloadCvBtn:hover{
-    background-color: white;
-    color: #C0AC9F ;
-}
-
-.newdownloadCvBtn a{
-    color: unset;
-    text-decoration: unset;
-}
-
-
-
-/*end new*/
 
 .heading{
-    width: 100%;
     display: grid;
-    grid-template-rows: auto 1fr 1fr 1fr;
-    grid-template-columns: 1fr ;
-    margin-bottom: 7rem;
+    width: 100%;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto;
+    margin: 0px auto;
+    overflow-x: clip;
 }
 
-.codeImg, .title, .subTitle, .downloadCvBtn{
-    grid-row: 1/ span 5;
-    grid-column: 1 / span 5;
+.man{
+    position: relative;
+    left: 9%;
+}
+
+
+.headerSection{
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: auto;
+margin: 0px auto;
+overflow-x: clip;
+}
+
+.window{
+    display: block;
+    margin: 0px auto;
+    grid-row: 1 / span 4;
+    grid-column: 1;
+    width: 95%;
 }
 
 .downloadCvBtn{
-    grid-row: 4/5;
     height: min-content;
     width: max-content;
     padding: 0.7rem;
@@ -135,13 +70,17 @@ margin-right: 1rem;
     font-weight: 600;
     font-size: 18px;
     color: white;
-    align-self: end;
     border: 0.3rem solid #C0AC9F;
-    margin-left: 8%;
-    margin-bottom: 4%;
+    grid-row: 3 / span 4;
+    grid-column: 1;
+    align-self: end;
+    position: relative;
+    top: -11%;
+    left: 5%;
+
 }
 
-.downloadCvBtn:hover{
+button.downloadCvBtn:hover{
     background-color: white;
     color: #C0AC9F ;
 }
@@ -152,33 +91,29 @@ margin-right: 1rem;
 }
 
 
-
-.codeImg{
-    width: 100%;
-    display: block;
-    margin: 0px auto;
-}
-
 .title{
     color:#415078;
     font-size: 20px;
     font-weight: bold;
-    grid-row: 3/4;
-    margin-left: 11%;
-    margin-top: 11%;
+    position: relative;
+    left: 11%;
+    top: 11%;
+    grid-row: 1 / span 4;
+    grid-column: 1;
+    height: min-content;
 }
 
 .subTitle{
     color:#415078;
     font-size: 40px;
     font-weight: bold;
-    grid-row: 3/4;
-    margin-left: 12%;
-    margin-top: 14%;
-  
+    position: relative;
+    left: 12%;
+    top: 14%;
+    grid-row: 1 / span 4;
+    grid-column: 1;
+    height: min-content;
 }
-
-/*CV button*/
 
 
 
@@ -452,51 +387,52 @@ footer{
 
 @media only screen and (min-width: 600px){
     /*For Tablet*/
-    .newheading{
+    .heading{
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .headerSection{
+        height: min-content;
+    }
+    
+    .man{
+        align-self: end;
         width: 100%;
-        display: grid;
-        grid-template-rows: 0.6fr 1fr 1fr;
-        grid-template-columns: 1fr ;
-        
     }
 }
 
 @media only screen and (min-width: 800px) {
     /* For desktop: */
 
-    /*Heading*/
-    .newheading{
-        width: 100%;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: auto 1fr 0.1fr;
-    }
+.window{
+    display: none;
+}
 
-    .man{
-        grid-column: 1;
-        grid-row: 2;
-        height: 100%;
-        width: 100%;
-    }
+.windowDesktop{
+    display: block;
+    grid-row: 1 / span 3;
+    grid-column: 1;
+}
 
+.downloadCvBtn{
+    top: -30%;
+    left: 7%;
+}
 
-    .window{
-        display: none;
-    }
+.title{
+    top: 14%;
+    left: 6%;
+}
 
-    .windowDesktop, .newtitle, .newsubTitle, .newdownloadCvBtn{
-        grid-row: 1/ span 2;
-         grid-column: 2;
-     }
+.subTitle{
+    top: 16%;
+    left: 7%;
+}
 
-
-    .windowDesktop{
-        display: block;
-        grid-row: 1 / span 2;
-        grid-column: 2;
-        margin: 0 auto;
-    }
-
+.man{
+    max-height: 430px;
+    min-height: 130px;
+}
     /*Menus*/
 .mobileBar{
     display: none;
