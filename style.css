@@ -168,6 +168,7 @@ button.downloadCvBtn:hover{
     padding: 1rem;    
     display: flex;
     flex-wrap: wrap;
+    row-gap: 15px;
     justify-content: space-between;
 }
 
@@ -181,7 +182,7 @@ display: flex;
 height: 1.5rem;
 justify-content: center;
 padding: 0.3rem;
-
+white-space: nowrap;
 min-width: 124px;
 font-weight: 600;
 font-size: 16px;
@@ -240,7 +241,6 @@ vertical-align: middle;
 .webAppBtn{
     color:#7FAFF5;
     border: 1px solid #7FAFF5;
-    margin-top: 15px
 }
 .webAppBtn:hover{
     color: white;
@@ -481,20 +481,24 @@ footer{
  
  .card{
      display: flex;
-     width: 75%;
-     max-width: 1200px;
-    
+     max-width: 1050px;
+     max-height: 215px;
+     
  }
+ 
 
  .cardContent{
      width: 100%;
+     overflow: hidden;
  }
 
  .cardButtons{
-     width: 40%;
-     margin: unset;
-     padding: unset;
      align-content: space-evenly;
+     width: 40%;
+ }
+
+ .cardScreenShot{
+     object-fit: cover;
  }
 
 /*Contact*/
@@ -559,4 +563,4 @@ footer{
     width: 80%;
 }
 
-  }
+}
