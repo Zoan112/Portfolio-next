@@ -21,6 +21,61 @@ margin-right: 1rem;
 }
 
 
+.mobileMenuDiv{
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    /*border: 1px solid black;*/
+}
+
+.mobileMenuBurger{
+    width: 50px;
+    height: 6px;
+    background: #415078;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.mobileMenuBurger::before,
+.mobileMenuBurger::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #415078;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+
+.mobileMenuBurger::before {
+  transform: translateY(-16px);
+}
+
+.mobileMenuBurger::after{
+  transform: translateY(16px);
+}
+
+
+.mobileMenuDiv.open .mobileMenuBurger::before{
+transform: rotate(-45deg) /*translate(35px, -35px)*/;
+}
+
+
+.mobileMenuDiv.open .mobileMenuBurger::after{
+    transform: rotate(45deg) /*translate(35px, 35px)*/;
+    }
+
+.mobileMenuDiv.open .mobileMenuBurger{
+    background: transparent;
+    }
 
 /*Heading*/
 
@@ -40,7 +95,8 @@ margin-right: 1rem;
 
 .man{
     position: relative;
-    left: 9%;
+    margin: 0px auto;
+    left: -18%;
 }
 
 
@@ -381,6 +437,13 @@ footer{
 }
 
 
+.backup:hover img{
+   /* transition-delay: 30ms;*/
+    transition: all 0.5 ease-out;
+    transform:  rotate(-20deg);
+
+}
+
 
 /*Desktop menu*/
 .desktopMenu{
@@ -419,7 +482,7 @@ footer{
     grid-row: 1 / span 3;
     grid-column: 1;
 
-    width: 80vw;
+    min-width: 60vw;
     max-height: 70vh;
 }
 
