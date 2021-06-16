@@ -91,15 +91,25 @@ Capacitor for the Camera API, Ionic framework for UI and Firebase for DB. (Work 
 <!-- Contact -->
 <h3 class="contactTitle" id="contactTitle">Contact</h3>
     <img class="contactSVG" src="Assets/undraw_contact_us_15o2 5.svg">
+
 <div class="contactContainer">
 <div class ="contactFormContainer">
-<div class="conatctForm">
-    <label>Email:</label>
-    <input placeholder="" type="email">
-    <label class="messages">Message:</label>
-    <textarea></textarea>
-    <button>Submit</button>
-</div>
+    <div class="msgStatus">
+        <img src="Assets/sucsess.svg">
+        <h3>Thank you!</h3>
+        <p>your submission has been sent.</p>
+    </div>
+
+    <form name="contactForm" action="POST" class="contactForm" id="contactForm" method="POST" data-netlify="true">
+        <label for="email">Email:</label>
+        <input placeholder="example@email.com" id="email" name="email"  type="email">
+
+        <label for="msg"  class="messages">Message:</label>
+        <textarea name="msg" id="msg"></textarea>
+        <button class="submitBtn" type="submit">Submit</button>
+    <form>
+
+
 </div>
   <div class="contactInfo">
       <p><img src="/Assets/Phone.svg">+972-545637115</p>

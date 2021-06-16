@@ -371,6 +371,30 @@ button:hover{
 }
 
 /*Contact From*/
+.msgStatus{
+    display: none;
+    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.msgStatus img{
+    width: 50%;
+    margin-top: 0.7rem;
+}
+
+.msgStatus h3{
+    margin-top: 1rem;
+    color: #BD9595;
+    font-weight: 550;
+}
+
+.msgStatus p{
+    color: #BD9595;
+    margin-bottom: 0.5rem;
+}
 .contactTitle{
     margin-top: 2.5rem;
     position: relative;
@@ -396,13 +420,13 @@ button:hover{
 
 }
 
-.conatctForm{
+.contactForm{
     display: flex;
     flex-direction: column;
     width: 85%;
     margin: 1.5rem auto;
 }
-.conatctForm button{
+.contactForm button{
     background-color: #C0AC9F;
     border-radius: 10px;
     color: white;
@@ -416,28 +440,28 @@ button:hover{
     border: none;
 }
 
-.conatctForm button:hover{
+.contactForm button:hover{
     background-color: white;
     color: #C0AC9F ;
     border: 5px solid #C0AC9F;
 
 }
 
-.conatctForm label{
+.contactForm label{
     font-weight: 500;
     font-size: 19px;
     line-height: 28px;
     color: #C0AC9F;
 }
 
-.conatctForm input{
+.contactForm input{
 border: none;
 background: #C4C4C4;
 border-radius: 10px;
 height: 22px;
 }
 
-.conatctForm textarea{
+.contactForm textarea{
     background: #C4C4C4;
     border-radius: 10px;
     min-height: 136px;
@@ -550,20 +574,20 @@ footer{
 .downloadCvBtn{
     margin: 0px auto;
     top: -30%;
-    left: -23%;
+    left: -32%;
 }
 
 .title{
     margin: 0px auto;
     top: 14%;
-    left: -20%;
+    left: -26%;
     font-size: 2.7rem;
 }
 
 .subTitle{
     margin: 0px auto;
     top: 20%;
-    left: -15%;
+    left: -21%;
     font-size: 4rem;
 }
 
@@ -571,6 +595,7 @@ footer{
     max-height: 430px;
     min-height: 130px;
     width: 200%;
+    left: 5%;
 }
     /*Menus*/
 
@@ -627,6 +652,7 @@ footer{
 .contactTitle{
     font-size: 2.5rem;
     overflow: initial;
+    margin-top: 8rem;
 }
 .contactSVG{
     width: 40%;
@@ -649,27 +675,27 @@ footer{
     height: 70vh;
 }
 
-.conatctForm{
+.contactForm{
     height: 100%;
 
     margin: auto;
     justify-content: center;
 }
 
-.conatctForm .messages{
+.contactForm .messages{
     margin-top: 2rem;
 }
 
 
-.conatctForm>textarea{
+.contactForm>textarea{
     height: 40%;
 }
 
-.conatctForm>button{
+.contactForm>button{
     margin-top: 1.5rem;
 }
 
-.conatctForm>input{
+.contactForm>input{
     height: 2.5rem;
 }
 
