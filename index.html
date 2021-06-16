@@ -102,13 +102,14 @@ Capacitor for the Camera API, Ionic framework for UI and Firebase for DB. (Work 
         <p>your submission has been sent.</p>
     </div>
 
-    <form name="contactMe" action="POST" class="contactForm" id="contactForm" method="POST" data-netlify="true">
+    <form name="contactForm" action="POST" class="contactForm" id="contactForm" method="POST" data-netlify="true">
+        <input type=​"hidden" name=​"form-name" value=​"contactForm"> ​
         <label for="email">Email:</label>
         <input placeholder="example@email.com" id="email" name="email"  type="email">
 
         <label for="msg"  class="messages">Message:</label>
         <textarea name="msg" id="msg"></textarea>
-        <button class="submitBtn" type="submit">Submit</button>
+        <button class="submitBtn" type="button input submit">Submit</button>
     <form>
 
 
