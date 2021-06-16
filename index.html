@@ -49,17 +49,18 @@
         
     </div>
 
-    <form name="formContact" action="POST" class="contactForm" id="formContact" data-netlify="true">
-        <label for="email">Email:</label>
-        <input  type="email" name="email" id="email" placeholder="example@email.com" >
-
-        <label for="msg"  class="messages">Message:</label>
-        <textarea name="msg" id="msg"></textarea>
-        <button class="submitBtn" type="button input submit">Submit</button>
-    <form>
    
-
-
+    <form name="contact" netlify>
+        <p>
+          <label>Name <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Email <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
 
 <!-- My work -->
     <img class="myWorkImg" id="myWork" src="Assets/myWorkImg.svg">
