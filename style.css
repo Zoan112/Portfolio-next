@@ -422,7 +422,6 @@ button:hover{
     background-color: #415078;
     /*height: 40vh;*/
     border-radius: 25px 0 0 0;
-
 }
 
 .contactForm{
@@ -538,7 +537,6 @@ footer{
    /* transition-delay: 30ms;*/
     transition: all 0.5 ease-out;
     transform:  rotate(-20deg);
-
 }
 
 
@@ -703,6 +701,7 @@ footer{
     -webkit-text-stroke-width: 2.5px;
     -webkit-text-stroke-color: #415078;
     text-decoration: underline;
+    text-decoration-thickness: from-font;
 }
 
 .contactInfo{
