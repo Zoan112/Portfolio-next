@@ -238,7 +238,7 @@ button.downloadCvBtn:hover{
 /*My work*/
 .myWorkImg{
     display: block;
-    margin: 3rem auto 0px auto;
+    margin: 4rem auto 0px auto;
 }
 
 
@@ -403,14 +403,14 @@ button:hover{
 .contactTitle{
     margin-top: 2.5rem;
     position: relative;
-    top: 3rem;
+    top: 4rem;
     font-weight: 500;
     font-size: 25px;
     line-height: 24px;
     align-items: center;
     text-align: center;
     color: #415078;
-    overflow: hidden;
+    overflow: unset;
 }
 
 .contactSVG{
@@ -463,8 +463,19 @@ button:hover{
 border: none;
 background: #C4C4C4;
 border-radius: 10px;
-height: 22px;
+height: 2rem;
 }
+
+
+.contactForm input, .contactForm textarea:focus-visible{
+    outline: none;
+    border:2px solid #C0AC9F;
+    }
+
+
+.contactForm input, .contactForm textarea{
+    padding-left: 0.4rem;
+    }
 
 .contactForm textarea{
     background: #C4C4C4;
@@ -549,6 +560,15 @@ footer{
     .man{
         align-self: end;
         width: 100%;
+    }
+
+
+    .contactSVG{
+        width: 80%;
+    }
+
+    .contactTitle{
+        font-size: 3rem;
     }
 }
 
@@ -654,14 +674,15 @@ footer{
 
 /*Contact*/
 
-.contactTitle{
-    font-size: 2.5rem;
-    overflow: initial;
-    margin-top: 4rem;
+.contactHeadingContainer{
+    margin-bottom: 6rem;
 }
+
+
 .contactSVG{
     width: 40%;
-    max-width: 438px;
+    /*max-width: 80%;*/
+    min-width: 665px;
 }
 
 .contactContainer{
@@ -669,6 +690,19 @@ footer{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
+}
+
+.contactTitle{
+    font-weight: 700;
+    font-size: 4.5rem;
+    top: 9rem;
+    overflow: initial;
+    line-height: unset;
+    margin: unset;
+    color: #cfd2d7;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: #415078;
+    text-decoration: underline;
 }
 
 .contactInfo{
