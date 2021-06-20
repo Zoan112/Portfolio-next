@@ -146,11 +146,12 @@ nav.open{
     grid-row: 1 / span 3;
     grid-column: 1;
     margin: auto auto;
-    font-size: 200px;
+    font-size: 13em;
 }
 
 .test p{
     overflow: hidden;
+    color:#415078;
 }
 .py-5{
     grid-row: 1 / span 2;
