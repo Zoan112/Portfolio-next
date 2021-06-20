@@ -137,6 +137,80 @@ nav.open{
 }
 /*Heading*/
 
+
+
+/*Animations*/
+
+
+
+.py-5{
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    height: min-content;
+   /* margin: 0px auto;*/
+    position: relative;
+    top: 17%;
+    left: 8%;
+    width: auto;
+    white-space: nowrap;
+}
+  
+  .output {
+      overflow: hidden;
+  }
+  
+  .output h1{
+    color:#415078;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .output h3{
+    color:#415078;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 100%;
+    overflow: visible;
+    position: relative;
+    padding-left: 2.5%;
+    top: -0.5rem;
+  }
+  /* Cursor Styling */
+  
+  .cursor::after {
+    content:'';
+    display:inline-block;
+    margin-left:3px;
+    background-color:#415078;
+    animation-name:blink;
+    animation-duration:0.5s;
+    animation-iteration-count: infinite;
+  }
+  h1.cursor::after {
+    height:24px;
+    width:6px;
+  }
+  h3.cursor::after {
+    height:24px;
+    width:6px;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity:1;
+    }
+    49% {
+      opacity:1;
+    }
+    50% {
+      opacity:0;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  /*######End typeWriter animation########*/
+
 .windowDesktop{
     display: none;
 }
@@ -165,6 +239,7 @@ grid-template-columns: auto;
 margin: 0px auto;
 overflow-x: clip;
 }
+
 
 .window{
     display: block;
@@ -209,6 +284,8 @@ button.downloadCvBtn:hover{
 }
 
 
+
+/*
 .title{
     color:#415078;
     font-size: 20px;
@@ -233,7 +310,7 @@ button.downloadCvBtn:hover{
     height: min-content;
 }
 
-
+*/
 
 /*My work*/
 .myWorkImg{
@@ -600,18 +677,27 @@ footer{
     left: -32%;
 }
 
-.title{
+
+.py-5{
+    top: 20%;
+    left: 13%;
+    width: auto;
+}
+
+.output{
+
+}
+
+.output h1{
     margin: 0px auto;
-    top: 14%;
-    left: -26%;
     font-size: 2.7rem;
 }
 
-.subTitle{
+.output h3{
     margin: 0px auto;
-    top: 20%;
-    left: -21%;
+    padding-left: 2.5%;
     font-size: 4rem;
+    white-space: nowrap;
 }
 
 .man{
@@ -678,7 +764,7 @@ footer{
 
 
 .contactSVG{
-    width: 40%;
+    width: 30vw;
     /*max-width: 80%;*/
     min-width: 665px;
 }
