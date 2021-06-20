@@ -93,6 +93,7 @@ function typeWriter(id, ar, dc) {
     
 
 
+
     // If full string hasn't yet been typed out, continue typing
     if (i < aString.length) {
       console.log(aString.charAt(i))
@@ -100,10 +101,11 @@ function typeWriter(id, ar, dc) {
       if (aString.charAt(i) == "|") {
         isParagraph = true;
         eHeader.removeClass("cursor");
+
        eParagraph.addClass("cursor");
 
       
-        //test.addClass("cursor");
+
         i++;
         setTimeout(function(){ typeWriter(id, ar, dc); }, speedBetweenLines);
         
@@ -119,12 +121,15 @@ function typeWriter(id, ar, dc) {
         setTimeout(function(){ typeWriter(id, ar, dc); }, speedForward);
       }
       
+
     // Second Row.
+
     } else if (i == aString.length) {
       doneDrawingText = true
       console.log("doneDrawingText")
       eParagraph.removeClass("cursor");
       eDrawing.addClass("cursor");
+
 
       console.log(dc);
       console.log(dc[a]);
