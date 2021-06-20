@@ -142,6 +142,19 @@ nav.open{
 /*Animations*/
 
 
+.test{
+    grid-row: 1 / span 3;
+    grid-column: 1;
+    margin: auto auto;
+    top: 3%;
+    position: relative;
+}
+
+.test p{
+    font-size: 5em;
+    overflow: hidden;
+    color:#415078;
+}
 
 .py-5{
     grid-row: 1 / span 2;
@@ -680,6 +693,12 @@ footer{
     margin: 0px auto;
     top: -30%;
     left: -32%;
+}
+
+
+
+.test p{
+    font-size: 13em;
 }
 
 

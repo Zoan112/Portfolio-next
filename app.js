@@ -83,7 +83,15 @@ function typeWriter(id, ar, dc) {
       aDrawContent = dc[a],
       eHeader = element.children("h1"), //Header element
       eParagraph = element.children("h3"); //Subheader element
-      eDrawing = element.children("p");
+     //eDrawing = element.children("p");
+     //eDrawing = document.getElementsByClassName("test")[0];
+
+
+     
+     var drawelement = $("#" + "test"),
+    eDrawing = drawelement.children("p");
+    
+
 
 
     // If full string hasn't yet been typed out, continue typing
@@ -93,7 +101,11 @@ function typeWriter(id, ar, dc) {
       if (aString.charAt(i) == "|") {
         isParagraph = true;
         eHeader.removeClass("cursor");
-        eParagraph.addClass("cursor");
+
+       eParagraph.addClass("cursor");
+
+      
+
         i++;
         setTimeout(function(){ typeWriter(id, ar, dc); }, speedBetweenLines);
         
@@ -109,12 +121,16 @@ function typeWriter(id, ar, dc) {
         setTimeout(function(){ typeWriter(id, ar, dc); }, speedForward);
       }
       
-    // If full string has been typed, switch to backspace mode.
+
+    // Second Row.
+
     } else if (i == aString.length) {
       doneDrawingText = true
       console.log("doneDrawingText")
       eParagraph.removeClass("cursor");
       eDrawing.addClass("cursor");
+
+
       console.log(dc);
       console.log(dc[a]);
       console.log(aDrawContent);
