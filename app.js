@@ -64,9 +64,9 @@ var drawContnet = ["<>",
 
 
 // Speed (in milliseconds) of typing.
-var speedForward = 50, //Typing Speed
+var speedForward = 80, //Typing Speed
     speedWait = 1000, // Wait between typing and backspacing
-    speedBetweenLines = 800; //Wait between first and second lines
+    speedBetweenLines = 600; //Wait between first and second lines
 
 //Run the loop
 typeWriter("output", textArray, drawContnet);
@@ -129,35 +129,27 @@ function typeWriter(id, ar, dc) {
       console.log("doneDrawingText")
       eParagraph.removeClass("cursor");
       eDrawing.addClass("cursor");
-
-
       console.log(dc);
       console.log(dc[a]);
       console.log(aDrawContent);
-
-      
-    
-      
-      
       var x = aDrawContent.length
       console.log('x',x);
       console.log('m',m)
-     
- 
+
 
       // Type header or subheader depending on whether pipe has been detected
       if (m != x){ 
         //eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
-        console.log(m)
-        
-        console.log('speed',speedForward)
-        setTimeout(function(){ draw(); }, speedForward);
+        console.log("once")
+        console.log("m",m);
+        setTimeout(function(){ draw(); }, speedBetweenLines);
       }
    
       function draw(){
         if (m != x){ 
           eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
-          console.log(m)
+          console.log("m",m);
+          console.log(aDrawContent.charAt(m));
           m++
           console.log('speed',speedForward,)
           setTimeout(function(){ draw(); }, speedForward);
