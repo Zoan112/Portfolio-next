@@ -44,47 +44,58 @@ submitBtn.addEventListener("click", function(e){
 
 
 //TypeWriter Animations
+
+var doneDrawingText = false;
 // values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
 var i = 0,
     a = 0,
-    isBackspacing = false,
+    m = 0,
+
     isParagraph = false;
 
 // Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
 var textArray = [
-  "Zohar Hadari|Developer|<>", 
+  "Zohar Hadari|Developer",  
  
 ];
+
+var drawContnet = ["<>",
+];
+
 
 // Speed (in milliseconds) of typing.
 var speedForward = 50, //Typing Speed
     speedWait = 1000, // Wait between typing and backspacing
-    speedBetweenLines = 800, //Wait between first and second lines
-    speedBackspace = 25; //Backspace Speed
+    speedBetweenLines = 800; //Wait between first and second lines
 
 //Run the loop
-typeWriter("output", textArray);
+typeWriter("output", textArray, drawContnet);
 
-function typeWriter(id, ar) {
+function typeWriter(id, ar, dc) {
+ // console.log("ar",ar);
+ // console.log(dc[a].charAt(2));
+  /*
+  console.log(dc[a]);
+  console.log(aDrawContent);*/
+
   var element = $("#" + id),
       aString = ar[a],
+      aDrawContent = dc[a],
       eHeader = element.children("h1"), //Header element
       eParagraph = element.children("h3"); //Subheader element
-      eDrawing = element.children("p");//document.getElementsByClassName("lessThenDrawing")[0];
+      eDrawing = element.children("p");
 
-  // Determine if animation should be typing or backspacing
-  if (!isBackspacing) {
-    
+
     // If full string hasn't yet been typed out, continue typing
     if (i < aString.length) {
-      
+      console.log(aString.charAt(i))
       // If character about to be typed is a pipe, switch to second line and continue.
       if (aString.charAt(i) == "|") {
         isParagraph = true;
         eHeader.removeClass("cursor");
         eParagraph.addClass("cursor");
         i++;
-        setTimeout(function(){ typeWriter(id, ar); }, speedBetweenLines);
+        setTimeout(function(){ typeWriter(id, ar, dc); }, speedBetweenLines);
         
       // If character isn't a pipe, continue typing.
       } else {
@@ -95,42 +106,57 @@ function typeWriter(id, ar) {
           eParagraph.text(eParagraph.text() + aString.charAt(i));
         }
         i++;
-        setTimeout(function(){ typeWriter(id, ar); }, speedForward);
+        setTimeout(function(){ typeWriter(id, ar, dc); }, speedForward);
       }
       
     // If full string has been typed, switch to backspace mode.
     } else if (i == aString.length) {
+      doneDrawingText = true
+      console.log("doneDrawingText")
+      eParagraph.removeClass("cursor");
+      eDrawing.addClass("cursor");
+      console.log(dc);
+      console.log(dc[a]);
+      console.log(aDrawContent);
+
       
-      isBackspacing = false;
-      setTimeout(function(){ typeWriter(id, ar); }, speedWait);
-      
-    }
     
-  // If backspacing is enabled
-  } else {
-    
-    // If either the header or the paragraph still has text, continue backspacing
-    if (eHeader.text().length > 0 || eParagraph.text().length > 0) {
       
-      // If paragraph still has text, continue erasing, otherwise switch to the header.
-      if (eParagraph.text().length > 0) {
-        eParagraph.text(eParagraph.text().substring(0, eParagraph.text().length - 1));
-      } else if (eHeader.text().length > 0) {
-        eParagraph.removeClass("cursor");
-        eHeader.addClass("cursor");
-        eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
+      
+      var x = aDrawContent.length
+      console.log('x',x);
+      console.log('m',m)
+     
+ 
+
+      // Type header or subheader depending on whether pipe has been detected
+      if (m != x){ 
+        //eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
+        console.log(m)
+        
+        console.log('speed',speedForward)
+        setTimeout(function(){ draw(); }, speedForward);
       }
-      setTimeout(function(){ typeWriter(id, ar); }, speedBackspace);
-    
-    // If neither head or paragraph still has text, switch to next quote in array and start typing.
-    } else { 
-      
-      isBackspacing = false;
-      i = 0;
-      isParagraph = false;
-      a = (a + 1) % ar.length; //Moves to next position in array, always looping back to 0
-      setTimeout(function(){ typeWriter(id, ar); }, 50);
-      
+   
+      function draw(){
+        if (m != x){ 
+          eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
+          console.log(m)
+          m++
+          console.log('speed',speedForward,)
+          setTimeout(function(){ draw(); }, speedForward);
+        }
+     
+        console.log("draw");
+       // eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
+        
+      }
     }
-  }
+  
+
+
+
+ 
+
 }
+
