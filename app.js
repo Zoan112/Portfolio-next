@@ -119,7 +119,7 @@ function typeWriter(id, ar, dc) {
         setTimeout(function(){ typeWriter(id, ar, dc); }, speedForward);
       }
       
-    // If full string has been typed, switch to backspace mode.
+    // Second Row.
     } else if (i == aString.length) {
       doneDrawingText = true
       console.log("doneDrawingText")

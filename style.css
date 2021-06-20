@@ -146,10 +146,12 @@ nav.open{
     grid-row: 1 / span 3;
     grid-column: 1;
     margin: auto auto;
-    font-size: 13em;
+    top: 3%;
+    position: relative;
 }
 
 .test p{
+    font-size: 5em;
     overflow: hidden;
     color:#415078;
 }
@@ -690,6 +692,11 @@ footer{
     margin: 0px auto;
     top: -30%;
     left: -32%;
+}
+
+
+.test p{
+    font-size: 13em;
 }
 
 
