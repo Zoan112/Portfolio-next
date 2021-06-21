@@ -78,7 +78,9 @@ var speedForward = 80, //Typing Speed
     speedBetweenLines = 600; //Wait between first and second lines
 
 //Run the loop
-typeWriter("output", textArray, drawContnet, buttonContnet);
+setTimeout(function(){ typeWriter("output", textArray, drawContnet, buttonContnet); }, 1700);
+
+//typeWriter("output", textArray, drawContnet, buttonContnet);
 
 function typeWriter(id, ar, dc, bc) {
 
@@ -228,11 +230,5 @@ function typeWriter(id, ar, dc, bc) {
         
       }
     }
-  
-
-
-
- 
-
 }
 
