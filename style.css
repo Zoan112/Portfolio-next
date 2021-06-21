@@ -212,7 +212,31 @@ nav.open{
     height:24px;
     width:6px;
   }
+
+  a.cursor::after{
+    height:24px;
+    width:6px;
+  }
+
+
+  .downloadCvBtn::after.cursor::after{
+    height:24px;
+    width:6px;
+  }
   
+  .downloadCvBtn.cursor::after{
+    height:24px;
+    width:6px;
+  }
+  
+  /*
+  .downloadCvBtn::after.cursor::after{
+    height:24px;
+    width:6px;
+  }
+
+  */
+
   @keyframes blink {
     0% {
       opacity:1;
@@ -271,7 +295,6 @@ overflow-x: clip;
     height: min-content;
     width: max-content;
     padding: 0.7rem;
-    border: none;
     background-color: #C0AC9F;
     border-radius: 10px;
     font-weight: 600;
@@ -284,6 +307,13 @@ overflow-x: clip;
     position: relative;
     top: -11%;
     left: 5%;
+    
+
+    /*For typeWriter animation*/
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+
 }
 
 button a{

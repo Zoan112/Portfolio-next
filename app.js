@@ -62,6 +62,15 @@ var textArray = [
 var drawContnet = ["<>",
 ];
 
+var buttonContnet = ["Download CV",
+];
+var stringButton = buttonContnet[a]
+var w = stringButton.length;
+
+console.log("w",w)
+
+var e = 0;
+
 
 // Speed (in milliseconds) of typing.
 var speedForward = 80, //Typing Speed
@@ -69,31 +78,32 @@ var speedForward = 80, //Typing Speed
     speedBetweenLines = 600; //Wait between first and second lines
 
 //Run the loop
-typeWriter("output", textArray, drawContnet);
+typeWriter("output", textArray, drawContnet, buttonContnet);
 
-function typeWriter(id, ar, dc) {
- // console.log("ar",ar);
- // console.log(dc[a].charAt(2));
-  /*
-  console.log(dc[a]);
-  console.log(aDrawContent);*/
+function typeWriter(id, ar, dc, bc) {
+
 
   var element = $("#" + id),
       aString = ar[a],
       aDrawContent = dc[a],
       eHeader = element.children("h1"), //Header element
       eParagraph = element.children("h3"); //Subheader element
-     //eDrawing = element.children("p");
-     //eDrawing = document.getElementsByClassName("test")[0];
 
 
-     
-     var drawelement = $("#" + "test"),
+
+    var drawelement = $("#" + "test"),
     eDrawing = drawelement.children("p");
+
+
+      
+    var drawElementBtn = $("#" + "downloadCvBtn"),
+    eDrawButton = drawElementBtn.children("a");
+    aDrawButton = bc[e];
+
+  
+
+
     
-
-
-
     // If full string hasn't yet been typed out, continue typing
     if (i < aString.length) {
       console.log(aString.charAt(i))
@@ -107,7 +117,7 @@ function typeWriter(id, ar, dc) {
       
 
         i++;
-        setTimeout(function(){ typeWriter(id, ar, dc); }, speedBetweenLines);
+        setTimeout(function(){ typeWriter(id, ar, dc, bc); }, speedBetweenLines);
         
       // If character isn't a pipe, continue typing.
       } else {
@@ -118,30 +128,18 @@ function typeWriter(id, ar, dc) {
           eParagraph.text(eParagraph.text() + aString.charAt(i));
         }
         i++;
-        setTimeout(function(){ typeWriter(id, ar, dc); }, speedForward);
+        setTimeout(function(){ typeWriter(id, ar, dc, bc); }, speedForward);
       }
       
 
     // Second Row.
-
     } else if (i == aString.length) {
       doneDrawingText = true
       console.log("doneDrawingText")
       eParagraph.removeClass("cursor");
       eDrawing.addClass("cursor");
-      console.log(dc);
-      console.log(dc[a]);
-      console.log(aDrawContent);
       var x = aDrawContent.length
-      console.log('x',x);
-      console.log('m',m)
-
-
-      // Type header or subheader depending on whether pipe has been detected
       if (m != x){ 
-        //eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
-        console.log("once")
-        console.log("m",m);
         setTimeout(function(){ draw(); }, speedBetweenLines);
       }
    
@@ -154,9 +152,76 @@ function typeWriter(id, ar, dc) {
           console.log('speed',speedForward,)
           setTimeout(function(){ draw(); }, speedForward);
         }
-     
-        console.log("draw");
-       // eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
+        else if(m == x){
+         // alert("done");
+          buttonDrawing();
+        }
+
+
+        //Third Line
+
+        function buttonDrawing(){
+          console.log("buttonDrawing");
+          eDrawing.removeClass("cursor");
+          eDrawButton.addClass("cursor");
+          console.log(eDrawButton)
+
+          if (w != e){ 
+            setTimeout(function(){ drawBtn(); }, speedBetweenLines);
+          }
+        };
+
+
+        function drawBtn(){
+          if (w != e){
+            console.log(w);
+          console.log(bc);
+         console.log(stringButton.charAt(e));
+         eDrawButton.text(eDrawButton.text() + stringButton.charAt(e));
+          e++
+          console.log(e);
+          setTimeout(function(){ drawBtn(); }, speedForward);
+          }else if (w == e){
+            buttonOutline()
+          }
+        }
+
+
+
+
+        function buttonOutline(){
+          eDrawButton.removeClass("cursor");
+          drawElementBtn.addClass("cursor");
+          setTimeout(function(){ CVbuttonStyle(); }, speedBetweenLines);
+        }
+
+
+
+
+
+       function CVbuttonStyle(){
+        CVbutton = document.getElementsByClassName("downloadCvBtn")[0]
+        CVbutton.style.backgroundColor = "#C0AC9F";
+        console.log("BGColor")
+
+
+        setTimeout(function() {
+          CVbutton.style.borderColor = "#C0AC9F";
+          console.log("borderColor")
+          },600)
+
+          setTimeout(function() {
+            CVbutton.style.color = "white"
+            console.log("TextColor")
+            },1200)
+
+
+            setTimeout(function() {
+              console.log("cursor")
+              drawElementBtn.removeClass("cursor");
+              },1800)
+         
+       }
         
       }
     }
