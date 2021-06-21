@@ -892,9 +892,9 @@ footer{
 
 
 .contactSVG{
-    width: 30vw;
-    /*max-width: 80%;*/
-    min-width: 665px;
+    min-width: 480px;
+    width: 30%;
+    position: relative;
 }
 
 .contactContainer{
@@ -905,9 +905,10 @@ footer{
 }
 
 .contactTitle{
+    
     font-weight: 700;
     font-size: 4.5rem;
-    top: 9rem;
+    top: 6rem;
     overflow: initial;
     line-height: unset;
     margin: unset;
