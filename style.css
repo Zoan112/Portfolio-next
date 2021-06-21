@@ -218,18 +218,27 @@ nav.open{
     width:6px;
   }
 
+  .blink.cursor::after{
+        height:24px;
+         width:6px;
+         margin-left: 0px;
+  }
+
 
   .downloadCvBtn::after.cursor::after{
     height:24px;
     width:6px;
   }
   
-  .downloadCvBtn.cursor::after{
+
+  /*
+  .downloadCvBtn.karmba{
     height:24px;
-    width:6px;
+    width:24px;
+    background-color: red;
   }
   
-  /*
+  
   .downloadCvBtn::after.cursor::after{
     height:24px;
     width:6px;
@@ -291,6 +300,24 @@ overflow-x: clip;
     width: 95%;
 }
 
+.blink{
+    grid-row: 3 / span 4;
+    grid-column: 1;
+    height: min-content;
+    width: min-content;
+    position: relative;
+    left: 15px;
+    top: 12px;
+}
+
+.buttonContainier{
+    grid-row: 3 / span 4;
+    grid-column: 1;
+    align-self: end;
+    margin-bottom: 4%;
+}
+
+
 .downloadCvBtn{
     height: min-content;
     width: max-content;
@@ -309,12 +336,38 @@ overflow-x: clip;
     left: 5%;
     
 
+    /*For typeWriter animation
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+*/
+}
+
+.downloadCvBtn.transparent{
     /*For typeWriter animation*/
     background-color: transparent;
     border-color: transparent;
     color: black;
-
 }
+
+
+
+.downloadCvBtn.bacgroundColor{
+    /*For typeWriter animation*/
+    background-color: #C0AC9F;
+}
+
+.downloadCvBtn.border{
+    /*For typeWriter animation*/
+    background-color: #C0AC9F;
+}
+
+
+.downloadCvBtn.color{
+    /*For typeWriter animation*/
+    background-color: white;
+}
+
 
 button a{
     text-decoration: none;
@@ -322,6 +375,11 @@ button a{
 }
 
 button.downloadCvBtn:hover{
+    background-color: white !important;
+    color: #C0AC9F !important;
+}
+
+.downloadCvBtn:hover{
     background-color: white;
     color: #C0AC9F ;
 }
@@ -719,10 +777,25 @@ footer{
     max-height: 70vh;
 }
 
+.buttonContainier{ 
+    margin: 0px ;
+    margin-left: 12%;
+    /*left: 8%;*/
+    position: relative;
+    width: max-content;
+    align-self: center;
+}
+
+.blink{
+    left: unset;
+    margin-left: 10px;
+}
+
 .downloadCvBtn{
+   
     margin: 0px auto;
     top: -30%;
-    left: -32%;
+   /* left: -32%;*/
 }
 
 

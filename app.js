@@ -190,8 +190,9 @@ function typeWriter(id, ar, dc, bc) {
 
 
         function buttonOutline(){
-          eDrawButton.removeClass("cursor");
-          drawElementBtn.addClass("cursor");
+          //eDrawButton.removeClass("cursor");
+          //drawElementBtn.addClass("cursor");
+        
           setTimeout(function(){ CVbuttonStyle(); }, speedBetweenLines);
         }
 
@@ -201,15 +202,17 @@ function typeWriter(id, ar, dc, bc) {
 
        function CVbuttonStyle(){
         CVbutton = document.getElementsByClassName("downloadCvBtn")[0]
-        CVbutton.style.backgroundColor = "#C0AC9F";
+        CVbutton.classList.add("bacgroundColor");
         console.log("BGColor")
 
 
         setTimeout(function() {
           CVbutton.style.borderColor = "#C0AC9F";
+          eDrawButton.removeClass("cursor");
+          $("#" + "blink").addClass("cursor")
           console.log("borderColor")
           },600)
-
+          
           setTimeout(function() {
             CVbutton.style.color = "white"
             console.log("TextColor")
@@ -218,7 +221,7 @@ function typeWriter(id, ar, dc, bc) {
 
             setTimeout(function() {
               console.log("cursor")
-              drawElementBtn.removeClass("cursor");
+             /* drawElementBtn.removeClass("cursor");*/
               },1800)
          
        }
