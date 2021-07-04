@@ -67,7 +67,7 @@ var buttonContnet = ["Download CV",
 var stringButton = buttonContnet[a]
 var w = stringButton.length;
 
-console.log("w",w)
+
 
 var e = 0;
 
@@ -108,7 +108,6 @@ function typeWriter(id, ar, dc, bc) {
     
     // If full string hasn't yet been typed out, continue typing
     if (i < aString.length) {
-      console.log(aString.charAt(i))
       // If character about to be typed is a pipe, switch to second line and continue.
       if (aString.charAt(i) == "|") {
         isParagraph = true;
@@ -137,7 +136,6 @@ function typeWriter(id, ar, dc, bc) {
     // Second Row.
     } else if (i == aString.length) {
       doneDrawingText = true
-      console.log("doneDrawingText")
       eParagraph.removeClass("cursor");
       eDrawing.addClass("cursor");
       var x = aDrawContent.length
@@ -148,10 +146,7 @@ function typeWriter(id, ar, dc, bc) {
       function draw(){
         if (m != x){ 
           eDrawing.text(eDrawing.text() + aDrawContent.charAt(m));
-          console.log("m",m);
-          console.log(aDrawContent.charAt(m));
           m++
-          console.log('speed',speedForward,)
           setTimeout(function(){ draw(); }, speedForward);
         }
         else if(m == x){
@@ -163,11 +158,9 @@ function typeWriter(id, ar, dc, bc) {
         //Third Line
 
         function buttonDrawing(){
-          console.log("buttonDrawing");
+
           eDrawing.removeClass("cursor");
           eDrawButton.addClass("cursor");
-          console.log(eDrawButton)
-
           if (w != e){ 
             setTimeout(function(){ drawBtn(); }, speedBetweenLines);
           }
@@ -176,12 +169,8 @@ function typeWriter(id, ar, dc, bc) {
 
         function drawBtn(){
           if (w != e){
-            console.log(w);
-          console.log(bc);
-         console.log(stringButton.charAt(e));
          eDrawButton.text(eDrawButton.text() + stringButton.charAt(e));
           e++
-          console.log(e);
           setTimeout(function(){ drawBtn(); }, speedForward);
           }else if (w == e){
             buttonOutline()
@@ -192,9 +181,6 @@ function typeWriter(id, ar, dc, bc) {
 
 
         function buttonOutline(){
-          //eDrawButton.removeClass("cursor");
-          //drawElementBtn.addClass("cursor");
-        
           setTimeout(function(){ CVbuttonStyle(); }, speedBetweenLines);
         }
 
@@ -205,25 +191,19 @@ function typeWriter(id, ar, dc, bc) {
        function CVbuttonStyle(){
         CVbutton = document.getElementsByClassName("downloadCvBtn")[0]
         CVbutton.classList.add("bacgroundColor");
-        console.log("BGColor")
-
 
         setTimeout(function() {
           CVbutton.style.borderColor = "#C0AC9F";
           eDrawButton.removeClass("cursor");
           $("#" + "blink").addClass("cursor")
-          console.log("borderColor")
           },600)
           
           setTimeout(function() {
             CVbutton.style.color = "white"
-            console.log("TextColor")
             },1200)
 
 
             setTimeout(function() {
-              console.log("cursor")
-             /* drawElementBtn.removeClass("cursor");*/
               },1800)
          
        }
