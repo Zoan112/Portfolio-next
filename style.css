@@ -392,33 +392,6 @@ button.downloadCvBtn:hover{
 
 
 
-/*
-.title{
-    color:#415078;
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    left: 11%;
-    top: 11%;
-    grid-row: 1 / span 4;
-    grid-column: 1;
-    height: min-content;
-}
-
-.subTitle{
-    color:#415078;
-    font-size: 40px;
-    font-weight: bold;
-    position: relative;
-    left: 12%;
-    top: 14%;
-    grid-row: 1 / span 4;
-    grid-column: 1;
-    height: min-content;
-}
-
-*/
-
 /*My work*/
 .myWorkImg{
     display: block;
@@ -547,12 +520,22 @@ vertical-align: middle;
 .webAppBtn:hover{
     color: white;
     background-color: #0d6efd;
+    overflow-x: clip;
 }
 
 .webAppBtn:hover .webAppLogo{
     filter:brightness(0) invert(1);
 }
 
+.docsLogo{
+    height: 36px;
+    width: auto;
+}
+
+.webAppBtn:hover .docsLogo{
+    filter: brightness(0) invert(1) ; /*brightness(40) invert(0.6)*/
+    
+}
 
 
 button:hover{
