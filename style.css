@@ -513,6 +513,24 @@ vertical-align: middle;
 
 
 }
+
+.playBtn{
+    color: #ff0000a6;
+    border: 1px solid red;
+}
+
+.playBtn:hover{
+    color: white;
+    background-color: #FF0000;
+    overflow-x: clip;
+}
+
+.playBtn:hover .playLogo{
+    filter:brightness(0) invert(1);
+}
+
+
+
 .webAppBtn{
     color:#7FAFF5;
     border: 1px solid #7FAFF5;
